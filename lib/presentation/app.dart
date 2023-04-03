@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_template/injection/injector.dart';
 import 'package:flutter_template/nstack/nstack.dart';
@@ -24,10 +23,7 @@ class App extends StatelessWidget {
           child: widget,
         );
       },
-      routerDelegate: AutoRouterDelegate(
-        appRouter,
-      ),
-      routeInformationParser: appRouter.defaultRouteParser(),
+      routerConfig: appRouter.config(),
     );
   }
 }

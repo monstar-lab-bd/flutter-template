@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_template/data/services/http_client/dio_http_client.dart';
 
 DioHttpClient? _dioClient;
@@ -42,9 +43,15 @@ class DioHttpClientBuilder {
 
     final options = BaseOptions()
       ..baseUrl = _baseUrl
+<<<<<<< HEAD
       ..connectTimeout = Duration(milliseconds: _connectTimeout)
       ..receiveTimeout = Duration(milliseconds: _receiveTimeout)
       ..sendTimeout = Duration(milliseconds: _sendTimeout);
+=======
+      ..connectTimeout = _connectTimeout.ms
+      ..receiveTimeout = _receiveTimeout.ms
+      ..sendTimeout = _sendTimeout.ms;
+>>>>>>> 8ebb092 (chore: update to autoroute v6 and fixed compilation issues)
 
     final dio = Dio(options);
     dio.interceptors.addAll(_interceptors);
