@@ -21,7 +21,8 @@ class SvgIcon {
         key: key,
         width: size ?? width,
         height: size ?? height,
-        color: color,
+        colorFilter:
+            color != null ? ColorFilter.mode(color, BlendMode.srcIn) : null,
         fit: fit ?? BoxFit.contain,
       );
 
@@ -32,7 +33,8 @@ class SvgIcon {
         key: key,
         width: 24.0,
         height: 24.0,
-        color: color,
+        colorFilter:
+            color != null ? ColorFilter.mode(color, BlendMode.srcIn) : null,
         fit: BoxFit.contain,
       );
 
@@ -43,7 +45,8 @@ class SvgIcon {
         key: key,
         width: 30.0,
         height: 30.0,
-        color: color,
+        colorFilter:
+            color != null ? ColorFilter.mode(color, BlendMode.srcIn) : null,
         fit: BoxFit.contain,
       );
 
@@ -54,7 +57,8 @@ class SvgIcon {
         key: key,
         width: 48.0,
         height: 48.0,
-        color: color,
+        colorFilter:
+            color != null ? ColorFilter.mode(color, BlendMode.srcIn) : null,
         fit: BoxFit.contain,
       );
 }
