@@ -8,8 +8,6 @@ name: Push CI Production
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
 jobs:
   analyze-and-test:
