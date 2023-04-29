@@ -1,6 +1,14 @@
-# This workflow builds, analyses and tests every pull request.
-name: Pull Request Validation
-on: pull_request
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Push CI Production
+
+on:
+  push:
+    branches: [ "master" ]
+
 jobs:
   analyze-and-test:
     runs-on: ubuntu-latest
