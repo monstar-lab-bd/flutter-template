@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/presentation/resources/resources.dart';
-import 'package:flutter_template/presentation/widgets/app_text_field.dart';
+import 'package:flutter_template/presentation/widgets/app_text_field/app_text_field.dart';
 
 class NewsPage extends StatelessWidget {
   const NewsPage({Key? key}) : super(key: key);
@@ -17,11 +17,9 @@ class NewsPage extends StatelessWidget {
         children: [
           AppTextField.normal(
             hintText: 'Username',
-            errorText: null,
           ),
           AppTextField.password(
             hintText: 'Password',
-            errorText: 'password should be 6 character long',
           ),
         ]
       ),
