@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/presentation/resources/resources.dart';
+import 'package:flutter_template/presentation/widgets/app_text_field/app_text_field.dart';
 
 class NewsPage extends StatelessWidget {
   const NewsPage({Key? key}) : super(key: key);
@@ -11,6 +12,16 @@ class NewsPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: context.colors.accent,
         title: const Text('News'),
+      ),
+      body: Column(
+        children: [
+          AppTextField.normal(
+            hintText: 'Username',
+          ),
+          AppTextField.password(
+            hintText: 'Password',
+          ),
+        ]
       ),
     );
   }
