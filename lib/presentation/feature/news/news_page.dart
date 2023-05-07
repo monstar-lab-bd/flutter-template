@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/presentation/resources/resources.dart';
-import 'package:flutter_template/presentation/widgets/app_text_field/app_text_field.dart';
+import 'package:flutter_template/presentation/widgets/app_button/app_button.dart';
 
 class NewsPage extends StatelessWidget {
   const NewsPage({Key? key}) : super(key: key);
@@ -13,15 +13,23 @@ class NewsPage extends StatelessWidget {
         backgroundColor: context.colors.accent,
         title: const Text('News'),
       ),
-      body: Column(
-        children: [
-          AppTextField.normal(
-            hintText: 'Username',
-          ),
-          AppTextField.password(
-            hintText: 'Password',
-          ),
-        ]
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            AppButton.primary(
+              onPressed: () {},
+              child: const Text('Save'),
+            ),
+            const SizedBox(height: 30),
+            AppButton.secondary(
+              onPressed: () {},
+              isLoading: false,
+              child: const Text('Save'),
+            ),
+            const SizedBox(height: 30),
+          ],
+        ),
       ),
     );
   }
