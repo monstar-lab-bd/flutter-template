@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_template/injection/injector.dart';
@@ -5,6 +6,7 @@ import 'package:flutter_template/presentation/feature/profile/profile_cubit.dart
 import 'package:flutter_template/presentation/feature/profile/profile_state.dart';
 import 'package:flutter_template/presentation/resources/resources.dart';
 
+@RoutePage()
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
 
@@ -25,33 +27,16 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: context.colors.background,
-      appBar: AppBar(
-        backgroundColor: context.colors.accent,
-        title: BlocBuilder<ProfileCubit, ProfileState>(
+      body: Center(
+        child: BlocBuilder<ProfileCubit, ProfileState>(
           bloc: _profilePresenter,
           builder: (context, state) {
-            return Text(state.isLoading ? 'Profile' : 'Profile: ${state.name}');
+            if (state.isLoading) {
+              return const CircularProgressIndicator();
+            } else {
+              return Text('Hi ${state.name}!');
+            }
           },
-        ),
-      ),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(32.0),
-          child: Center(
-            child: Column(
-              children: [
-                BlocBuilder<ProfileCubit, ProfileState>(
-                    bloc: _profilePresenter,
-                    builder: (context, state) {
-                      if (state.isLoading) {
-                        return const CircularProgressIndicator();
-                      } else {
-                        return Text('Hi ${state.name}!');
-                      }
-                    })
-              ],
-            ),
-          ),
         ),
       ),
     );
