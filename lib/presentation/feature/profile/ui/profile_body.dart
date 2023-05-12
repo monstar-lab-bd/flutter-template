@@ -14,7 +14,6 @@ class ProfileBody extends StatelessWidget {
       body: Center(
         child: BlocBuilder<ProfileCubit, ProfileState>(
           builder: (context, state) {
-            debugPrint(state.toString());
             return state.status.maybeWhen(
               loading: () => const CircularProgressIndicator(),
               success: () => Text('Hi ${state.name}'),
