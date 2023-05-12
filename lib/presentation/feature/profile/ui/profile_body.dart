@@ -19,9 +19,7 @@ class ProfileBody extends StatelessWidget {
               loading: () => const CircularProgressIndicator(),
               success: () => Text('Hi ${state.name}'),
               failure: (error) => const Text('Something went Wrong!'),
-              orElse: () {
-                return const SizedBox();
-              },
+              orElse: () => const SizedBox(),
             );
           },
         ),
