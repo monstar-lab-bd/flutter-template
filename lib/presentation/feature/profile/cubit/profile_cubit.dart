@@ -31,7 +31,6 @@ class ProfileCubit extends Cubit<ProfileState> {
       }
       emit(state.copyWith(
         status: BaseStatus.failure(ResponseError.from(e)),
-        name: '',
       ));
     }
   }
