@@ -6,9 +6,12 @@ This project serves as a template project for Flutter applications. You can gene
 ## 🔧 Setup and Installation
 - Execute `$ flutter doctor` to verify installations
 - Execute `$ pub get` to pull project dependencies
+- Execute build runner
+  - `dart run build_runner build -d`, if you are on flutter 3.10.1 or later
+  - `flutter packages pub run build_runner build -d`, if you are in lower versions than 3.10.1 
 - Execute a run configuration of choice
-  - `$ flutter run --flavor staging -t lib/main_staging.dart`
-  - `$ flutter run --flavor production -t lib/main_production.dart`
+  - `$ flutter run -t lib/main_staging.dart`
+  - `$ flutter run -t lib/main_production.dart`
 
 ## 🌲 Branches
 * `master` - Latest version in the app store.
