@@ -9,7 +9,7 @@ import 'package:injectable/injectable.dart';
 class DioHttpClient extends HttpClient {
   DioHttpClient(this.dio);
 
-  final Dio dio;
+  Dio dio;
 
   @override
   Map<String, dynamic> get headers => dio.options.headers;

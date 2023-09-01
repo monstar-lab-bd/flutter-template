@@ -6,8 +6,8 @@ part 'quote_entity.g.dart';
 @freezed
 class QuoteEntity with _$QuoteEntity {
   const factory QuoteEntity({
-    required String author,
-    required String body,
+    String? author,
+    String? body,
   }) = _QuoteEntity;
 
   factory QuoteEntity.fromJson(Map<String, dynamic> json) =>

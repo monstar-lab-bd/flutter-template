@@ -7,8 +7,8 @@ class QuoteRemapper {
   QuoteEntity fromNetworkResponse(QuoteResponse response) {
     final quote = response.quote;
     final entity = QuoteEntity(
-      author: quote.author,
-      body: quote.body,
+      author: quote?.author,
+      body: quote?.body,
     );
 
     return entity;

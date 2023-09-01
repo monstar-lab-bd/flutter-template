@@ -9,8 +9,7 @@ part 'profile_remote_data_source.g.dart';
 @injectable
 abstract class ProfileRemoteDataSource {
   @factoryMethod
-  factory ProfileRemoteDataSource(@Named('ApiDio') Dio dio, {String? baseUrl}) =
-      _ProfileRemoteDataSource;
+  factory ProfileRemoteDataSource(Dio dio) = _ProfileRemoteDataSource;
 
   @GET('qotd')
   Future<QuoteResponse> getQuote();

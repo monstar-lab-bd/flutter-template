@@ -6,7 +6,10 @@ import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: ProfileService)
 class ProfileServiceImpl extends ProfileService {
-  ProfileServiceImpl(this._profileRemoteDataSource, this._quoteRemapper);
+  ProfileServiceImpl(
+    this._profileRemoteDataSource,
+    this._quoteRemapper,
+  );
 
   final ProfileRemoteDataSource _profileRemoteDataSource;
   final QuoteRemapper _quoteRemapper;

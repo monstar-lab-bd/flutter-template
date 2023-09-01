@@ -46,9 +46,12 @@ class DioHttpClientBuilder {
       ..receiveTimeout = Duration(milliseconds: _receiveTimeout)
       ..sendTimeout = Duration(milliseconds: _sendTimeout);
 
-    final dio = Dio(options);
-    dio.interceptors.addAll(_interceptors);
+    final dio = Dio(options)
+      // ..httpClientAdapter = DefaultHttpClientAdapter()
+      ..interceptors.addAll(_interceptors);
+
     _dioClient = DioHttpClient(dio);
+
     return _dioClient!;
   }
 }

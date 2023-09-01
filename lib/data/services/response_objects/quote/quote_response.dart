@@ -6,8 +6,8 @@ part 'quote_response.g.dart';
 @freezed
 class QuoteResponse with _$QuoteResponse {
   const factory QuoteResponse({
-    required DateTime qotdDate,
-    required Quote quote,
+    String? qotdDate,
+    Quote? quote,
   }) = _QuoteResponse;
 
   factory QuoteResponse.fromJson(Map<String, dynamic> json) =>
@@ -17,17 +17,17 @@ class QuoteResponse with _$QuoteResponse {
 @freezed
 class Quote with _$Quote {
   const factory Quote({
-    required int id,
-    required bool dialogue,
-    required bool private,
-    required List<String> tags,
-    required String url,
-    required int favoritesCount,
-    required int upvotesCount,
-    required int downvotesCount,
-    required String author,
-    required String authorPermalink,
-    required String body,
+    int? id,
+    bool? dialogue,
+    bool? private,
+    List<String>? tags,
+    String? url,
+    int? favoritesCount,
+    int? upvotesCount,
+    int? downvotesCount,
+    String? author,
+    String? authorPermalink,
+    String? body,
   }) = _Quote;
 
   factory Quote.fromJson(Map<String, dynamic> json) => _$QuoteFromJson(json);
