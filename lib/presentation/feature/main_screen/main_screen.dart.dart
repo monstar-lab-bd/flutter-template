@@ -22,7 +22,7 @@ class MainScreen extends StatelessWidget {
       routes: const [
         HomeRoute(),
         NewsRoute(),
-        ProfileRoute(),
+        QuoteRoute(),
       ],
       backgroundColor: context.colors.background,
       bottomNavigationBuilder: (_, tabsRouter) {
@@ -40,8 +40,8 @@ class MainScreen extends StatelessWidget {
               label: 'News',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle_outlined),
-              label: 'Profile',
+              icon: Icon(Icons.bookmark_border),
+              label: 'Quote',
             ),
           ],
         );
