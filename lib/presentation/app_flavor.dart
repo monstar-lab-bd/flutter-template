@@ -9,4 +9,8 @@ extension FlavorName on AppFlavor {
         return 'production';
     }
   }
+
+  String get baseUrl {
+    return 'https://favqs.com/api/';
+  }
 }

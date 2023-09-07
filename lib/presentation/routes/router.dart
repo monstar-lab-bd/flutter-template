@@ -14,7 +14,7 @@ class AppRouter extends $AppRouter {
       children: [
         AutoRoute(path: '', page: HomeRoute.page),
         AutoRoute(path: 'news', page: NewsRoute.page),
-        AutoRoute(path: 'profile', page: ProfileRoute.page),
+        AutoRoute(path: 'profile', page: QuoteRoute.page),
       ],
     ),
   ];

@@ -1,6 +1,6 @@
 import 'package:injectable/injectable.dart';
 
-@Injectable()
+@lazySingleton
 class ApiConfig {
   final String baseUrl;
 
