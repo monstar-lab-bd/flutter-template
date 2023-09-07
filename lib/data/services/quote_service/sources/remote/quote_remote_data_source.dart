@@ -3,13 +3,13 @@ import 'package:flutter_template/data/services/response_objects/quote/quote_resp
 import 'package:injectable/injectable.dart';
 import 'package:retrofit/retrofit.dart';
 
-part 'profile_remote_data_source.g.dart';
+part 'quote_remote_data_source.g.dart';
 
 @RestApi()
 @injectable
-abstract class ProfileRemoteDataSource {
+abstract class QuoteRemoteDataSource {
   @factoryMethod
-  factory ProfileRemoteDataSource(Dio dio) = _ProfileRemoteDataSource;
+  factory QuoteRemoteDataSource(Dio dio) = _QuoteRemoteDataSource;
 
   @GET('qotd')
   Future<QuoteResponse> getQuote();

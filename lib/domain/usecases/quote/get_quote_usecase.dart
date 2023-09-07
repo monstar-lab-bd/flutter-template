@@ -5,10 +5,10 @@ import 'package:injectable/injectable.dart';
 
 @injectable
 class GetQuoteUseCase extends FutureOutputUseCase<QuoteEntity> {
-  final ProfileService _profileService;
+  final QuoteService _quoteService;
 
-  GetQuoteUseCase(this._profileService);
+  GetQuoteUseCase(this._quoteService);
 
   @override
-  Future<QuoteEntity> run() async => _profileService.getQuote();
+  Future<QuoteEntity> run() async => _quoteService.getQuote();
 }
